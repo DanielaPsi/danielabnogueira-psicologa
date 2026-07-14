@@ -136,6 +136,7 @@ button:focus-visible {
 
 .kicker {
     font-size: 0.7rem;
+    line-height: 1.45;
     text-transform: uppercase;
     letter-spacing: 3.8px;
     color: var(--color-accent);
@@ -277,7 +278,7 @@ button:focus-visible {
     margin-bottom: 24px;
 }
 
-.content-block p {
+.content-block p:not(.kicker):not(.highlight-text) {
     font-size: var(--text-base);
     line-height: 1.8;
     color: var(--color-muted);

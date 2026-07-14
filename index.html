@@ -371,6 +371,42 @@
 
     </footer>
 
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(link => {
+            link.addEventListener("click", event => {
+                const selector = link.getAttribute("href");
+                const target = document.querySelector(selector);
+
+                if (!target) {
+                    return;
+                }
+
+                event.preventDefault();
+
+                target.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                });
+
+                history.replaceState(
+                    null,
+                    "",
+                    window.location.pathname + window.location.search
+                );
+            });
+        });
+
+        window.addEventListener("load", () => {
+            if (window.location.hash) {
+                history.replaceState(
+                    null,
+                    "",
+                    window.location.pathname + window.location.search
+                );
+            }
+        });
+    </script>
+
 </body>
 
 </html>
