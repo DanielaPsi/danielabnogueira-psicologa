@@ -53,11 +53,13 @@ a {
     color: inherit;
 }
 
+
 /* Evita que as secções fiquem escondidas pela navegação fixa */
 
 section {
     scroll-margin-top: 100px;
 }
+
 
 /* ACESSIBILIDADE */
 
@@ -71,6 +73,11 @@ button:focus-visible {
 .btn:focus-visible {
     outline-color: var(--color-white);
 }
+
+.btn-secondary:focus-visible {
+    outline-color: var(--color-accent-dark);
+}
+
 
 /* NAVEGAÇÃO */
 
@@ -132,6 +139,7 @@ button:focus-visible {
     transform: scaleX(1);
 }
 
+
 /* ELEMENTOS GERAIS */
 
 .kicker {
@@ -149,16 +157,38 @@ button:focus-visible {
     background: var(--color-accent-dark);
     color: var(--color-white);
     padding: 17px 36px;
+    border: 1px solid var(--color-accent-dark);
     border-radius: var(--radius);
     font-weight: 600;
     font-size: 0.93rem;
-    transition: background 0.3s ease;
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease;
 }
 
 .btn:hover,
 .btn:focus-visible {
     background: var(--color-accent-deeper);
+    border-color: var(--color-accent-deeper);
 }
+
+
+/* BOTÃO SECUNDÁRIO */
+
+.btn-secondary {
+    background: transparent;
+    color: var(--color-accent-deeper);
+    border: 1px solid rgba(140, 91, 71, 0.45);
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus-visible {
+    background: rgba(140, 91, 71, 0.07);
+    color: var(--color-accent-deeper);
+    border-color: var(--color-accent-dark);
+}
+
 
 /* HERO */
 
@@ -193,6 +223,7 @@ button:focus-visible {
     margin-bottom: 46px;
 }
 
+
 /* ACOMPANHAMENTO TERAPÊUTICO */
 
 .combined-section {
@@ -209,15 +240,20 @@ button:focus-visible {
     align-items: center;
 }
 
+
+/* FOTOGRAFIA */
+
 .image-block {
     position: relative;
     max-width: 430px;
     margin: 0 auto;
+    padding-left: 18px;
+    padding-bottom: 22px;
 }
 
 .photo-frame {
     width: 100%;
-    height: 520px;
+    aspect-ratio: 4 / 5;
     position: relative;
     overflow: hidden;
     border-radius: var(--radius);
@@ -248,12 +284,18 @@ button:focus-visible {
     filter: contrast(0.9) saturate(0.88) brightness(1.02);
 }
 
+
+/*
+    A moldura decorativa mantém-se,
+    mas deixa de ter exatamente o mesmo tamanho da fotografia.
+*/
+
 .image-placeholder-accent {
     position: absolute;
-    top: 22px;
-    left: -22px;
-    width: 100%;
-    height: 520px;
+    left: -5px;
+    bottom: 0;
+    width: 78%;
+    height: 82%;
     background: var(--color-soft);
     z-index: 1;
     border-radius: var(--radius);
@@ -288,6 +330,7 @@ button:focus-visible {
 .content-block p:last-child {
     margin-bottom: 0;
 }
+
 
 /* ATIVIDADE PROFISSIONAL */
 
@@ -326,8 +369,7 @@ button:focus-visible {
 }
 
 .professional-block,
-.areas-card,
-.professional-note {
+.areas-card {
     background: var(--color-bg);
     border-radius: var(--radius);
     padding: 34px;
@@ -353,6 +395,7 @@ button:focus-visible {
     margin-bottom: 0;
 }
 
+
 /* FORMAÇÕES */
 
 .formation-list {
@@ -370,6 +413,7 @@ button:focus-visible {
     font-size: 0.95rem;
     line-height: 1.5;
 }
+
 
 /* LISTA DE LOCAIS */
 
@@ -399,6 +443,7 @@ button:focus-visible {
     border-radius: 50%;
 }
 
+
 /* ÁREAS */
 
 .areas-card {
@@ -423,9 +468,16 @@ button:focus-visible {
     line-height: 1.4;
 }
 
+
+/*
+    Nota final sem caixa.
+    Apenas uma separação subtil.
+*/
+
 .professional-note {
-    margin-top: 34px;
-    background: rgba(253, 251, 247, 0.72);
+    margin-top: 40px;
+    padding-top: 28px;
+    border-top: 1px solid rgba(166, 110, 89, 0.25);
 }
 
 .professional-note p {
@@ -434,6 +486,7 @@ button:focus-visible {
     line-height: 1.8;
     color: var(--color-muted);
 }
+
 
 /* CONTACTO */
 
@@ -515,9 +568,9 @@ button:focus-visible {
 .location-inline-btn {
     margin-top: 18px;
     padding: 12px 22px;
-    border-bottom: none;
     font-size: 0.88rem;
 }
+
 
 /* RODAPÉ */
 
@@ -528,6 +581,7 @@ footer {
     color: #8C827A;
     font-size: 0.82rem;
 }
+
 
 /* RESPONSIVO */
 
@@ -547,6 +601,7 @@ footer {
 
 }
 
+
 @media (max-width: 992px) {
 
     .combined-grid,
@@ -561,11 +616,6 @@ footer {
         margin: 0 auto;
     }
 
-    .photo-frame,
-    .image-placeholder-accent {
-        height: 520px;
-    }
-
     .areas-card {
         position: static;
     }
@@ -576,6 +626,7 @@ footer {
 
 }
 
+
 @media (max-width: 768px) {
 
     :root {
@@ -583,44 +634,74 @@ footer {
         --title-section: 2.05rem;
     }
 
+
     section {
-        scroll-margin-top: 170px;
+        scroll-margin-top: 155px;
     }
+
+
+    /*
+        Menu mobile:
+        mais compacto e com uma linha ténue entre
+        o nome e as secções.
+    */
 
     .nav {
         height: auto;
-        padding: 18px 6%;
+        padding: 13px 6% 12px;
         flex-direction: column;
-        gap: 16px;
+        gap: 0;
     }
+
 
     .nav-logo {
-        font-size: 1.58rem;
+        width: 100%;
+        padding-bottom: 12px;
+
+        font-size: 1.52rem;
         white-space: normal;
         text-align: center;
+
+        border-bottom: 1px solid rgba(255, 255, 255, 0.28);
     }
+
 
     .nav ul {
+        width: 100%;
+
+        padding-top: 11px;
+
         flex-wrap: wrap;
         justify-content: center;
-        gap: 12px 16px;
+
+        gap: 9px 17px;
     }
 
+
     .nav a {
-        font-size: 0.84rem;
+        font-size: 0.82rem;
     }
+
+
+    .nav ul a::after {
+        bottom: -4px;
+    }
+
 
     .hero {
         padding: 165px 6% 84px;
     }
 
+
     .hero h1 {
         letter-spacing: -0.8px;
     }
 
+
     .subtext {
         font-size: 1rem;
     }
+
 
     .combined-section,
     .professional-section,
@@ -628,28 +709,63 @@ footer {
         padding: 82px 6%;
     }
 
-    .photo-frame,
-    .image-placeholder-accent {
-        height: 440px;
+
+    /*
+        Mantém a nova composição da fotografia
+        também no telemóvel.
+    */
+
+    .image-block {
+        width: calc(100% - 12px);
+        max-width: 410px;
+
+        padding-left: 15px;
+        padding-bottom: 18px;
     }
+
+
+    .image-placeholder-accent {
+        left: -4px;
+        width: 78%;
+        height: 80%;
+    }
+
 
     .highlight-text {
         font-size: 1.04rem;
     }
 
+
     .professional-block,
     .areas-card,
-    .professional-note,
     .contact-card {
         padding: 28px 24px;
     }
+
+
+    .professional-note {
+        margin-top: 36px;
+        padding-top: 25px;
+    }
+
 
     .btn {
         width: 100%;
         text-align: center;
     }
 
+
+    /*
+        O botão secundário de localização
+        não precisa de ocupar toda a largura.
+    */
+
+    .location-inline-btn {
+        width: auto;
+    }
+
 }
+
 
 @media (max-width: 480px) {
 
@@ -658,20 +774,48 @@ footer {
         --title-section: 1.95rem;
     }
 
+
     section {
-        scroll-margin-top: 185px;
+        scroll-margin-top: 165px;
     }
+
+
+    .nav {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+
+    .nav-logo {
+        font-size: 1.47rem;
+        padding-bottom: 11px;
+    }
+
+
+    .nav ul {
+        padding-top: 10px;
+        gap: 8px 14px;
+    }
+
+
+    .nav a {
+        font-size: 0.8rem;
+    }
+
 
     .kicker {
         letter-spacing: 3px;
     }
 
-    .photo-frame,
-    .image-placeholder-accent {
-        height: 380px;
+
+    .image-block {
+        width: calc(100% - 10px);
+        padding-left: 12px;
+        padding-bottom: 16px;
     }
 
 }
+
 
 /* RESPEITA A PREFERÊNCIA DE REDUÇÃO DE MOVIMENTO */
 
