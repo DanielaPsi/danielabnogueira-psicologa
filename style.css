@@ -250,8 +250,23 @@ button:focus-visible {
 }
 
 
+.hero-layout {
+    width: 100%;
+    max-width: 1180px;
+
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(300px, 0.85fr);
+
+    gap: 72px;
+
+    align-items: center;
+}
+
+
 .hero-inner {
-    max-width: 940px;
+    max-width: 760px;
 }
 
 
@@ -277,6 +292,40 @@ button:focus-visible {
     color: #4C4641;
 
     margin-bottom: 46px;
+}
+
+
+/* IMAGEM DO HERO */
+
+.hero-image-block {
+    width: 100%;
+    max-width: 430px;
+
+    justify-self: end;
+
+    padding: 8px;
+
+    background: var(--color-bg);
+
+    border: 1px solid rgba(166, 110, 89, 0.32);
+    border-radius: var(--radius);
+}
+
+
+.hero-image {
+    display: block;
+
+    width: 100%;
+
+    aspect-ratio: 4 / 5;
+
+    object-fit: cover;
+    object-position: center;
+
+    filter:
+        contrast(0.96)
+        saturate(0.92)
+        brightness(1.02);
 }
 
 
@@ -816,6 +865,20 @@ footer {
 
 @media (max-width: 992px) {
 
+    .hero-layout {
+        grid-template-columns: 1fr;
+
+        gap: 52px;
+    }
+
+
+    .hero-image-block {
+        max-width: 430px;
+
+        justify-self: center;
+    }
+
+
     .combined-grid,
     .professional-grid,
     .contact-card {
@@ -824,15 +887,18 @@ footer {
         gap: 52px;
     }
 
+
     .image-block {
         max-width: 430px;
 
         margin: 0 auto;
     }
 
+
     .areas-card {
         position: static;
     }
+
 
     .contact-details {
         padding-top: 0;
@@ -910,6 +976,11 @@ footer {
     }
 
 
+    .hero-layout {
+        gap: 42px;
+    }
+
+
     .hero h1 {
         letter-spacing: -0.8px;
     }
@@ -917,6 +988,14 @@ footer {
 
     .subtext {
         font-size: 1rem;
+    }
+
+
+    .hero-image-block {
+        width: 100%;
+        max-width: 410px;
+
+        padding: 7px;
     }
 
 
@@ -1020,6 +1099,11 @@ footer {
 
     .kicker {
         letter-spacing: 3px;
+    }
+
+
+    .hero-image-block {
+        padding: 6px;
     }
 
 
