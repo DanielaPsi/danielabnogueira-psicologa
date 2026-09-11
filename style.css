@@ -1,30 +1,17 @@
 :root {
-    /* TEXTO */
+    /* CORES PRINCIPAIS */
     --color-text: #1A1613;
     --color-muted: #5C534C;
 
-    /* TERRACOTA ORIGINAL */
     --color-accent: #A66E59;
     --color-accent-dark: #8C5B47;
     --color-accent-deeper: #734838;
 
-    /* PALETA PRINCIPAL */
-    --color-hero: #FDFBF7;
-    --color-therapy: #F4EBE0;
-    --color-professional: #E3EAF0;
-    --color-contact: #F1E4DA;
-    --color-footer: #FDFBF7;
-
-    /* CARTÕES */
-    --color-card: #FDFBF7;
-    --color-card-white: #FFFFFF;
-
-    /* AZUL SUAVE */
-    --color-blue-soft: #D5E0E8;
-    --color-blue-border: #BCCBD6;
-    --color-blue-text: #3F505B;
-
+    /* FUNDOS */
     --color-white: #FFFFFF;
+    --color-bg: #FDFBF7;
+    --color-soft: #F4EBE0;
+    --color-soft-strong: #F1E4DA;
 
     /* TIPOGRAFIA */
     --font-body: "Inter", sans-serif;
@@ -40,7 +27,6 @@
     --title-hero: clamp(2.55rem, 4.45vw, 4.05rem);
 
     --section-padding: 100px 10%;
-
     --radius: 4px;
 }
 
@@ -63,9 +49,8 @@ html {
 
 body {
     font-family: var(--font-body);
-
     color: var(--color-text);
-    background: var(--color-hero);
+    background: var(--color-white);
 
     overflow-x: hidden;
 }
@@ -165,7 +150,6 @@ button:focus-visible {
 
 .nav a {
     font-weight: 600;
-
     font-size: var(--text-small);
 }
 
@@ -235,7 +219,6 @@ button:focus-visible {
     border-radius: var(--radius);
 
     font-weight: 600;
-
     font-size: 0.93rem;
 
     transition:
@@ -286,7 +269,7 @@ button:focus-visible {
 
     padding: 135px 7% 38px;
 
-    background: var(--color-hero);
+    background: var(--color-white);
 
     display: flex;
 
@@ -385,7 +368,7 @@ button:focus-visible {
 .combined-section {
     padding: var(--section-padding);
 
-    background: var(--color-therapy);
+    background: var(--color-soft);
 }
 
 
@@ -426,7 +409,7 @@ button:focus-visible {
 
     overflow: hidden;
 
-    background: var(--color-card);
+    background: var(--color-bg);
 
     border: 1px solid rgba(166, 110, 89, 0.32);
 
@@ -459,7 +442,6 @@ button:focus-visible {
     height: 100%;
 
     object-fit: cover;
-
     object-position: center center;
 
     display: block;
@@ -523,7 +505,7 @@ button:focus-visible {
 .professional-section {
     padding: var(--section-padding);
 
-    background: var(--color-professional);
+    background: var(--color-bg);
 }
 
 
@@ -576,9 +558,9 @@ button:focus-visible {
 
 .professional-block,
 .areas-card {
-    background: rgba(253, 251, 247, 0.93);
+    background: var(--color-white);
 
-    border: 1px solid rgba(92, 115, 130, 0.16);
+    border: 1px solid rgba(166, 110, 89, 0.11);
 
     border-radius: var(--radius);
 
@@ -657,7 +639,7 @@ button:focus-visible {
 
     padding: 15px 18px;
 
-    background: var(--color-card-white);
+    background: var(--color-bg);
 
     border-left: 4px solid var(--color-accent);
 
@@ -740,13 +722,13 @@ button:focus-visible {
 
     padding: 11px 15px;
 
-    background: var(--color-blue-soft);
+    background: var(--color-soft-strong);
 
-    border: 1px solid var(--color-blue-border);
+    border: 1px solid rgba(166, 110, 89, 0.16);
 
     border-radius: var(--radius);
 
-    color: var(--color-blue-text);
+    color: #3F3833;
 
     font-size: 0.9rem;
 
@@ -763,7 +745,7 @@ button:focus-visible {
 
     padding-top: 28px;
 
-    border-top: 1px solid rgba(92, 115, 130, 0.25);
+    border-top: 1px solid rgba(166, 110, 89, 0.25);
 }
 
 
@@ -785,7 +767,7 @@ button:focus-visible {
 .contact {
     padding: 92px 6% 96px;
 
-    background: var(--color-contact);
+    background: var(--color-soft-strong);
 }
 
 
@@ -794,11 +776,11 @@ button:focus-visible {
 
     margin: 0 auto;
 
-    background: rgba(253, 251, 247, 0.94);
+    background: var(--color-bg);
 
     padding: 52px 56px;
 
-    border: 1px solid rgba(166, 110, 89, 0.15);
+    border: 1px solid rgba(166, 110, 89, 0.13);
 
     border-radius: var(--radius);
 
@@ -918,7 +900,7 @@ footer {
 
     padding: 42px 20px;
 
-    background: var(--color-footer);
+    background: var(--color-bg);
 
     color: #8C827A;
 
@@ -1134,8 +1116,7 @@ footer {
 
 
     /*
-       Mantém a imagem grande, como na versão anterior.
-       Nenhuma pessoa é cortada.
+       Ilustração grande, sem cortar nenhuma pessoa.
     */
 
     .hero-image-block {
