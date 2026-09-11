@@ -241,9 +241,9 @@ button:focus-visible {
     min-height: 100vh;
     min-height: 100svh;
 
-    padding: 155px 10% 105px;
+    padding: 150px 10% 100px;
 
-    background: var(--color-soft);
+    background: var(--color-white);
 
     display: flex;
     align-items: center;
@@ -257,16 +257,19 @@ button:focus-visible {
     margin: 0 auto;
 
     display: grid;
-    grid-template-columns: minmax(0, 1.15fr) minmax(300px, 0.85fr);
 
-    gap: 72px;
+    grid-template-columns:
+        minmax(0, 1.05fr)
+        minmax(320px, 0.95fr);
+
+    gap: 68px;
 
     align-items: center;
 }
 
 
 .hero-inner {
-    max-width: 760px;
+    max-width: 720px;
 }
 
 
@@ -295,20 +298,17 @@ button:focus-visible {
 }
 
 
-/* IMAGEM DO HERO */
+/* IMAGEM DO TOPO */
 
 .hero-image-block {
     width: 100%;
-    max-width: 430px;
+    max-width: 560px;
 
     justify-self: end;
 
-    padding: 8px;
-
-    background: var(--color-bg);
-
-    border: 1px solid rgba(166, 110, 89, 0.32);
-    border-radius: var(--radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
@@ -316,16 +316,14 @@ button:focus-visible {
     display: block;
 
     width: 100%;
+    height: auto;
 
-    aspect-ratio: 4 / 5;
+    max-width: 100%;
 
-    object-fit: cover;
+    object-fit: contain;
     object-position: center;
 
-    filter:
-        contrast(0.96)
-        saturate(0.92)
-        brightness(1.02);
+    filter: none;
 }
 
 
@@ -334,7 +332,7 @@ button:focus-visible {
 .combined-section {
     padding: var(--section-padding);
 
-    background: var(--color-white);
+    background: var(--color-soft);
 }
 
 
@@ -353,7 +351,7 @@ button:focus-visible {
 }
 
 
-/* FOTOGRAFIA */
+/* FOTOGRAFIA DO CONSULTÓRIO */
 
 .image-block {
     position: relative;
@@ -465,7 +463,7 @@ button:focus-visible {
 .professional-section {
     padding: var(--section-padding);
 
-    background: var(--color-soft);
+    background: var(--color-white);
 }
 
 
@@ -518,6 +516,8 @@ button:focus-visible {
     border-radius: var(--radius);
 
     padding: 34px;
+
+    border: 1px solid rgba(166, 110, 89, 0.10);
 }
 
 
@@ -631,7 +631,6 @@ button:focus-visible {
     position: absolute;
 
     left: 0;
-
     top: 0.65em;
 
     width: 6px;
@@ -707,7 +706,7 @@ button:focus-visible {
 .contact {
     padding: 90px 6% 96px;
 
-    background: var(--color-white);
+    background: var(--color-soft);
 }
 
 
@@ -716,7 +715,7 @@ button:focus-visible {
 
     margin: 0 auto;
 
-    background: var(--color-soft);
+    background: var(--color-white);
 
     padding: 52px 56px;
 
@@ -836,7 +835,7 @@ footer {
 
     padding: 40px 20px;
 
-    background: var(--color-bg);
+    background: var(--color-white);
 
     color: #8C827A;
 
@@ -852,12 +851,19 @@ footer {
         padding: 0 6%;
     }
 
+
     .nav ul {
         gap: 22px;
     }
 
+
     .nav a {
         font-size: 0.84rem;
+    }
+
+
+    .hero-layout {
+        gap: 48px;
     }
 
 }
@@ -868,12 +874,17 @@ footer {
     .hero-layout {
         grid-template-columns: 1fr;
 
-        gap: 52px;
+        gap: 48px;
+    }
+
+
+    .hero-inner {
+        max-width: 780px;
     }
 
 
     .hero-image-block {
-        max-width: 430px;
+        max-width: 560px;
 
         justify-self: center;
     }
@@ -972,6 +983,8 @@ footer {
 
 
     .hero {
+        min-height: auto;
+
         padding: 165px 6% 84px;
     }
 
@@ -993,9 +1006,11 @@ footer {
 
     .hero-image-block {
         width: 100%;
-        max-width: 410px;
+        max-width: 520px;
 
-        padding: 7px;
+        margin: 0 auto;
+
+        padding: 0;
     }
 
 
@@ -1006,7 +1021,7 @@ footer {
     }
 
 
-    /* FOTOGRAFIA MOBILE */
+    /* FOTOGRAFIA DO CONSULTÓRIO MOBILE */
 
     .image-block {
         width: 100%;
@@ -1102,8 +1117,20 @@ footer {
     }
 
 
+    .hero {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+
+    .hero-layout {
+        gap: 36px;
+    }
+
+
     .hero-image-block {
-        padding: 6px;
+        width: 100%;
+        max-width: 100%;
     }
 
 
