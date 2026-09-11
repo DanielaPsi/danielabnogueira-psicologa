@@ -1,14 +1,27 @@
 :root {
+    /* CORES PRINCIPAIS */
     --color-text: #1A1613;
     --color-muted: #5C534C;
+
     --color-accent: #A66E59;
     --color-accent-dark: #8C5B47;
     --color-accent-deeper: #734838;
-    --color-bg: #FDFBF7;
-    --color-soft: #F4EBE0;
+
+    /* FUNDOS DAS SECÇÕES */
+    --color-hero: #FCFAF7;
+    --color-therapy: #F4ECE5;
+    --color-professional: #FFFDFC;
+    --color-contact: #EFE3DD;
+    --color-footer: #F8F3EE;
+
+    /* FUNDOS SECUNDÁRIOS */
+    --color-card: #FAF6F2;
+    --color-card-light: #FFFDFC;
     --color-soft-strong: #F1E4DA;
+
     --color-white: #FFFFFF;
 
+    /* TIPOGRAFIA */
     --font-body: "Inter", sans-serif;
     --font-title: "Playfair Display", serif;
     --font-signature: "Cormorant Garamond", serif;
@@ -22,11 +35,14 @@
     --title-hero: clamp(2.55rem, 4.45vw, 4.05rem);
 
     --section-padding: 100px 10%;
+
     --radius: 4px;
 }
 
 
-/* RESET */
+/* =========================================================
+   RESET
+   ========================================================= */
 
 * {
     margin: 0;
@@ -43,7 +59,7 @@ html {
 body {
     font-family: var(--font-body);
     color: var(--color-text);
-    background: var(--color-bg);
+    background: var(--color-hero);
 }
 
 
@@ -68,7 +84,9 @@ section {
 }
 
 
-/* ACESSIBILIDADE */
+/* =========================================================
+   ACESSIBILIDADE
+   ========================================================= */
 
 a:focus-visible,
 button:focus-visible {
@@ -88,7 +106,9 @@ button:focus-visible {
 }
 
 
-/* NAVEGAÇÃO */
+/* =========================================================
+   NAVEGAÇÃO
+   ========================================================= */
 
 .nav {
     position: fixed;
@@ -170,7 +190,9 @@ button:focus-visible {
 }
 
 
-/* ELEMENTOS GERAIS */
+/* =========================================================
+   ELEMENTOS GERAIS
+   ========================================================= */
 
 .kicker {
     font-size: 0.7rem;
@@ -235,15 +257,17 @@ button:focus-visible {
 }
 
 
-/* HERO */
+/* =========================================================
+   HERO / INÍCIO
+   ========================================================= */
 
 .hero {
     min-height: 100vh;
     min-height: 100svh;
 
-    padding: 150px 10% 100px;
+    padding: 145px 9% 65px;
 
-    background: var(--color-white);
+    background: var(--color-hero);
 
     display: flex;
     align-items: center;
@@ -252,24 +276,24 @@ button:focus-visible {
 
 .hero-layout {
     width: 100%;
-    max-width: 1180px;
+    max-width: 1240px;
 
     margin: 0 auto;
 
     display: grid;
 
     grid-template-columns:
-        minmax(0, 1.05fr)
-        minmax(320px, 0.95fr);
+        minmax(0, 1fr)
+        minmax(380px, 1fr);
 
-    gap: 68px;
+    gap: 58px;
 
     align-items: center;
 }
 
 
 .hero-inner {
-    max-width: 720px;
+    max-width: 700px;
 }
 
 
@@ -298,11 +322,13 @@ button:focus-visible {
 }
 
 
-/* IMAGEM DO TOPO */
+/* =========================================================
+   IMAGEM DAS PESSOAS
+   ========================================================= */
 
 .hero-image-block {
     width: 100%;
-    max-width: 560px;
+    max-width: 620px;
 
     justify-self: end;
 
@@ -327,12 +353,14 @@ button:focus-visible {
 }
 
 
-/* ACOMPANHAMENTO TERAPÊUTICO */
+/* =========================================================
+   ACOMPANHAMENTO TERAPÊUTICO
+   ========================================================= */
 
 .combined-section {
     padding: var(--section-padding);
 
-    background: var(--color-soft);
+    background: var(--color-therapy);
 }
 
 
@@ -351,7 +379,9 @@ button:focus-visible {
 }
 
 
-/* FOTOGRAFIA DO CONSULTÓRIO */
+/* =========================================================
+   FOTOGRAFIA DO CONSULTÓRIO
+   ========================================================= */
 
 .image-block {
     position: relative;
@@ -371,7 +401,7 @@ button:focus-visible {
 
     overflow: hidden;
 
-    background: var(--color-soft);
+    background: var(--color-card);
 
     border: 1px solid rgba(166, 110, 89, 0.32);
     border-radius: var(--radius);
@@ -458,12 +488,14 @@ button:focus-visible {
 }
 
 
-/* ATIVIDADE PROFISSIONAL */
+/* =========================================================
+   ATIVIDADE PROFISSIONAL
+   ========================================================= */
 
 .professional-section {
     padding: var(--section-padding);
 
-    background: var(--color-white);
+    background: var(--color-professional);
 }
 
 
@@ -511,13 +543,13 @@ button:focus-visible {
 
 .professional-block,
 .areas-card {
-    background: var(--color-bg);
+    background: var(--color-card);
+
+    border: 1px solid rgba(166, 110, 89, 0.10);
 
     border-radius: var(--radius);
 
     padding: 34px;
-
-    border: 1px solid rgba(166, 110, 89, 0.10);
 }
 
 
@@ -550,7 +582,9 @@ button:focus-visible {
 }
 
 
-/* CÉDULA PROFISSIONAL */
+/* =========================================================
+   CÉDULA PROFISSIONAL
+   ========================================================= */
 
 .professional-id {
     font-size: 0.82rem !important;
@@ -571,7 +605,9 @@ button:focus-visible {
 }
 
 
-/* FORMAÇÕES */
+/* =========================================================
+   FORMAÇÕES
+   ========================================================= */
 
 .formation-list {
     display: grid;
@@ -587,7 +623,7 @@ button:focus-visible {
 
     padding: 15px 18px;
 
-    background: var(--color-white);
+    background: var(--color-card-light);
 
     border-left: 4px solid var(--color-accent);
 
@@ -599,7 +635,9 @@ button:focus-visible {
 }
 
 
-/* LISTA DE LOCAIS */
+/* =========================================================
+   LISTA DE LOCAIS
+   ========================================================= */
 
 .places-list {
     display: grid;
@@ -642,7 +680,9 @@ button:focus-visible {
 }
 
 
-/* ÁREAS */
+/* =========================================================
+   ÁREAS DE ACOMPANHAMENTO
+   ========================================================= */
 
 .areas-card {
     position: sticky;
@@ -679,7 +719,9 @@ button:focus-visible {
 }
 
 
-/* NOTA FINAL */
+/* =========================================================
+   NOTA FINAL
+   ========================================================= */
 
 .professional-note {
     margin-top: 40px;
@@ -701,12 +743,14 @@ button:focus-visible {
 }
 
 
-/* CONTACTO */
+/* =========================================================
+   CONTACTO
+   ========================================================= */
 
 .contact {
-    padding: 90px 6% 96px;
+    padding: 92px 6% 96px;
 
-    background: var(--color-soft);
+    background: var(--color-contact);
 }
 
 
@@ -715,9 +759,11 @@ button:focus-visible {
 
     margin: 0 auto;
 
-    background: var(--color-white);
+    background: rgba(255, 253, 252, 0.88);
 
     padding: 52px 56px;
+
+    border: 1px solid rgba(166, 110, 89, 0.09);
 
     border-radius: var(--radius);
 
@@ -828,14 +874,16 @@ button:focus-visible {
 }
 
 
-/* RODAPÉ */
+/* =========================================================
+   RODAPÉ
+   ========================================================= */
 
 footer {
     text-align: center;
 
     padding: 40px 20px;
 
-    background: var(--color-white);
+    background: var(--color-footer);
 
     color: #8C827A;
 
@@ -843,7 +891,9 @@ footer {
 }
 
 
-/* RESPONSIVO */
+/* =========================================================
+   RESPONSIVO — ATÉ 1100PX
+   ========================================================= */
 
 @media (max-width: 1100px) {
 
@@ -862,19 +912,42 @@ footer {
     }
 
 
+    .hero {
+        padding-left: 7%;
+        padding-right: 7%;
+    }
+
+
     .hero-layout {
-        gap: 48px;
+        gap: 42px;
+    }
+
+
+    .hero-image-block {
+        max-width: 580px;
     }
 
 }
 
 
+/* =========================================================
+   RESPONSIVO — TABLET
+   ========================================================= */
+
 @media (max-width: 992px) {
+
+    .hero {
+        min-height: auto;
+
+        padding-top: 145px;
+        padding-bottom: 55px;
+    }
+
 
     .hero-layout {
         grid-template-columns: 1fr;
 
-        gap: 48px;
+        gap: 36px;
     }
 
 
@@ -884,9 +957,12 @@ footer {
 
 
     .hero-image-block {
-        max-width: 560px;
+        width: 100%;
+        max-width: 620px;
 
         justify-self: center;
+
+        margin: 0 auto;
     }
 
 
@@ -917,6 +993,10 @@ footer {
 
 }
 
+
+/* =========================================================
+   RESPONSIVO — TELEMÓVEL
+   ========================================================= */
 
 @media (max-width: 768px) {
 
@@ -982,15 +1062,25 @@ footer {
     }
 
 
+    /* HERO MOBILE */
+
     .hero {
         min-height: auto;
 
-        padding: 165px 6% 84px;
+        padding:
+            165px
+            4%
+            38px;
     }
 
 
     .hero-layout {
-        gap: 42px;
+        gap: 28px;
+    }
+
+
+    .hero-inner {
+        max-width: none;
     }
 
 
@@ -1001,12 +1091,14 @@ footer {
 
     .subtext {
         font-size: 1rem;
+
+        margin-bottom: 38px;
     }
 
 
     .hero-image-block {
         width: 100%;
-        max-width: 520px;
+        max-width: 650px;
 
         margin: 0 auto;
 
@@ -1014,14 +1106,24 @@ footer {
     }
 
 
-    .combined-section,
-    .professional-section,
-    .contact {
-        padding: 82px 6%;
+    .hero-image {
+        width: 100%;
+        height: auto;
+
+        max-width: none;
     }
 
 
-    /* FOTOGRAFIA DO CONSULTÓRIO MOBILE */
+    /* SECÇÕES */
+
+    .combined-section,
+    .professional-section,
+    .contact {
+        padding: 78px 6%;
+    }
+
+
+    /* FOTOGRAFIA DO CONSULTÓRIO */
 
     .image-block {
         width: 100%;
@@ -1045,6 +1147,8 @@ footer {
     }
 
 
+    /* CARTÕES */
+
     .professional-block,
     .areas-card,
     .contact-card {
@@ -1059,6 +1163,8 @@ footer {
     }
 
 
+    /* BOTÕES */
+
     .btn {
         width: 100%;
 
@@ -1072,6 +1178,10 @@ footer {
 
 }
 
+
+/* =========================================================
+   RESPONSIVO — TELEMÓVEIS PEQUENOS
+   ========================================================= */
 
 @media (max-width: 480px) {
 
@@ -1088,7 +1198,6 @@ footer {
 
     .nav {
         padding-left: 5%;
-
         padding-right: 5%;
     }
 
@@ -1117,22 +1226,36 @@ footer {
     }
 
 
+    /* HERO */
+
     .hero {
-        padding-left: 5%;
-        padding-right: 5%;
+        padding:
+            165px
+            3%
+            30px;
     }
 
 
     .hero-layout {
-        gap: 36px;
+        gap: 24px;
     }
 
 
     .hero-image-block {
         width: 100%;
-        max-width: 100%;
+        max-width: none;
+
+        margin: 0;
     }
 
+
+    .hero-image {
+        width: 100%;
+        max-width: none;
+    }
+
+
+    /* CONSULTÓRIO */
 
     .photo-frame {
         padding: 6px;
@@ -1143,10 +1266,20 @@ footer {
         inset: 6px;
     }
 
+
+    /* CONTACTO */
+
+    .contact {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
 }
 
 
-/* RESPEITA A PREFERÊNCIA DE REDUÇÃO DE MOVIMENTO */
+/* =========================================================
+   REDUÇÃO DE MOVIMENTO
+   ========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
 
