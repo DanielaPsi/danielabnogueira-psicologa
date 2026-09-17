@@ -60,6 +60,7 @@
         </a>
 
         <ul>
+
             <li>
                 <a href="#inicio">Início</a>
             </li>
@@ -75,9 +76,11 @@
             <li>
                 <a href="#contacto">Contacto</a>
             </li>
+
         </ul>
 
     </nav>
+
 
     <main>
 
@@ -113,7 +116,7 @@
 
                 </div>
 
-                <!-- IMAGEM DO TOPO -->
+
                 <div class="hero-image-block">
 
                     <img
@@ -130,6 +133,7 @@
         </section>
 
 
+
         <!-- ACOMPANHAMENTO TERAPÊUTICO -->
         <section
             id="sobre"
@@ -138,22 +142,26 @@
 
             <div class="combined-grid">
 
+
+                <!-- FOTOGRAFIA DO CONSULTÓRIO -->
+
                 <div class="image-block">
 
                     <div class="photo-frame">
 
                         <img
-                            src="consultorio.jpg.jpeg"
+                            src="consultorio2.jpg"
                             alt="Consultório de psicologia de Daniela Borges Nogueira no Porto"
                             class="profile-img"
-                            width="1536"
-                            height="2048"
                             decoding="async"
                         >
 
                     </div>
 
                 </div>
+
+
+                <!-- TEXTO -->
 
                 <div class="content-block">
 
@@ -184,6 +192,7 @@
         </section>
 
 
+
         <!-- ATIVIDADE PROFISSIONAL -->
         <section
             id="percurso"
@@ -207,7 +216,9 @@
 
                 <div class="professional-grid">
 
+
                     <div class="professional-main">
+
 
                         <div class="professional-block">
 
@@ -227,6 +238,7 @@
                                 A minha prática clínica tem sido aprofundada nas áreas da psicoterapia psicanalítica e da intervenção no luto.
                             </p>
 
+
                             <div class="formation-list">
 
                                 <span>
@@ -242,6 +254,7 @@
                         </div>
 
 
+
                         <div class="professional-block">
 
                             <h3>
@@ -252,26 +265,37 @@
                                 Tenho desenvolvido o meu trabalho em consulta psicológica individual com jovens adultos e adultos, em contextos institucionais e de clínica privada.
                             </p>
 
+
                             <div class="places-list">
 
                                 <span>Associação Inluto</span>
+
                                 <span>Clínica privada</span>
-                                <span>Centro Hospitalar Universitário de São João</span>
+
+                                <span>
+                                    Centro Hospitalar Universitário de São João
+                                </span>
+
                                 <span>USF Valongo</span>
 
                             </div>
 
                         </div>
 
+
                     </div>
+
 
 
                     <div class="professional-side">
 
+
+                        <!-- FOTOGRAFIA DE PERFIL -->
+
                         <figure class="professional-photo">
 
                             <img
-                                src="daniela.jpg"
+                                src="perfil.jpg"
                                 alt="Daniela Borges Nogueira, Psicóloga Clínica"
                                 loading="lazy"
                                 decoding="async"
@@ -287,19 +311,28 @@
                                 Áreas frequentes de acompanhamento
                             </h3>
 
+
                             <div class="areas-list">
 
                                 <span>Ansiedade</span>
+
                                 <span>Depressão</span>
+
                                 <span>Luto e perda</span>
+
                                 <span>Dificuldades relacionais</span>
-                                <span>Processos de transição e mudança</span>
+
+                                <span>
+                                    Processos de transição e mudança
+                                </span>
 
                             </div>
 
                         </aside>
 
+
                     </div>
+
 
                 </div>
 
@@ -312,9 +345,11 @@
 
                 </div>
 
+
             </div>
 
         </section>
+
 
 
         <!-- CONTACTO -->
@@ -324,6 +359,7 @@
         >
 
             <div class="contact-card">
+
 
                 <div class="contact-intro">
 
@@ -346,6 +382,7 @@
 
 
                 <div class="contact-details">
+
 
                     <div class="detail-item">
 
@@ -396,13 +433,16 @@
 
                     </div>
 
+
                 </div>
 
             </div>
 
         </section>
 
+
     </main>
+
 
 
     <!-- RODAPÉ -->
@@ -415,10 +455,15 @@
     </footer>
 
 
+
     <script>
+
         document.querySelectorAll('a[href^="#"]').forEach(link => {
+
             link.addEventListener("click", event => {
+
                 const selector = link.getAttribute("href");
+
                 const target = document.querySelector(selector);
 
                 if (!target) {
@@ -437,19 +482,28 @@
                     "",
                     window.location.pathname + window.location.search
                 );
+
             });
+
         });
 
+
         window.addEventListener("load", () => {
+
             if (window.location.hash) {
+
                 history.replaceState(
                     null,
                     "",
                     window.location.pathname + window.location.search
                 );
+
             }
+
         });
+
     </script>
+
 
 </body>
 
